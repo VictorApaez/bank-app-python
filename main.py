@@ -5,15 +5,16 @@ def main():
     acc = Account('123456', 100)
 
     # Test deposit method
-    print(f"Balance after depositing 50: {acc.deposit(50)}")
-    print(f"Balance after depositing 50: {acc.deposit(10)}")
+    acc.deposit(50)
+    acc.deposit(10)
 
     # Test withdraw method
-    print(f"Balance after withdrawing 70: {acc.withdraw(70)}")
+    acc.withdraw(7)
 
+        
     # Attempt to withdraw more than the current balance
     try:
-        print(f"Attempting to withdraw 500: {acc.withdraw(500)}")
+       acc.withdraw(500)
     except ValueError as e:
         print(e)
     

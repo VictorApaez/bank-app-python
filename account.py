@@ -1,4 +1,5 @@
 import datetime
+from decorators import validate_transaction
 
 class Account:
     def __init__(self, account_number, balance=0):
@@ -12,10 +13,9 @@ class Account:
         self.transactions.append(('deposit', amount, currentTime))
         return self.balance
 
+    @validate_transaction
     def withdraw(self, amount):
-        if amount > self.balance:
-            raise ValueError("Insufficient balance!")
         self.balance -= amount
         currentTime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        self.transactions.append(('deposit', amount, currentTime))
+        self.transactions.append(('withdraw', amount, currentTime))
         return self.balance
