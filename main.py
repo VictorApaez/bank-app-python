@@ -2,7 +2,7 @@ from account import Account
 
 def main():
     # Create a new Account instance
-    acc = Account('123456', 100)  # an account with account number '123456' and an initial balance of 100
+    acc = Account('123456', 100)
 
     # Test deposit method
     print(f"Balance after depositing 50: {acc.deposit(50)}")
