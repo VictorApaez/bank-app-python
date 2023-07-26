@@ -19,3 +19,7 @@ class Account:
         currentTime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
         self.transactions.append(('withdraw', amount, currentTime))
         return self.balance
+    
+    def transaction_logs(self):
+        for transaction in self.transactions:
+            yield transaction
