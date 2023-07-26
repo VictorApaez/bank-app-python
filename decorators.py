@@ -9,6 +9,6 @@ def validate_transaction(func):
         if amount < 0:
             raise ValueError("Transaction amount cannot be negative.")
         if func.__name__ == 'withdraw' and amount > account.balance:
-            raise ValueError("Insufficient funds!")
+            raise ValueError("Insufficient balance!")
         return func(account, amount)
     return wrapper
