@@ -29,14 +29,14 @@ The Banking System Simulation is built in Python and uses object-oriented progra
 1. Clone the repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/banking-system.git
+git clone https://github.com/VictorApaez/banking-system.git
 
 ```
 
 2. Navigate to the project folder:
 
 ```bash
-cd banking-system
+cd bank-app-python
 
 ```
 
